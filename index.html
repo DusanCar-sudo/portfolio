@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Dušan Milosavljević — AI Evaluation & Training, Enterprise Systems Domain Expert, Lean Process Optimization. 25 years of systems work.">
+<meta property="og:title" content="Dušan Milosavljević — Portfolio">
+<meta property="og:description" content="AI Evaluation & Training · Enterprise Systems · Lean Process Optimization">
+<meta property="og:type" content="website">
+<title>Dušan Milosavljević — Portfolio</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230a1628'/%3E%3Ctext x='16' y='22' font-family='Arial' font-size='16' font-weight='bold' fill='%234a9eff' text-anchor='middle'%3EDM%3C/text%3E%3C/svg%3E">
+<style>
+:root{--bg:#0a1628;--bg2:#0f1e36;--card:#122340;--ink:#e8eef4;--muted:#7a8fa6;--accent:#4a9eff;--accent2:#c8d9f0;--line:rgba(74,158,255,.15);}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{font-family:'Segoe UI',system-ui,sans-serif;background:var(--bg);color:var(--ink);overflow-x:hidden;line-height:1.6;}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;justify-content:space-between;align-items:center;padding:1.1rem 6vw;transition:.4s all;}
+nav.scrolled{background:rgba(10,22,40,.85);backdrop-filter:blur(14px);padding:.8rem 6vw;border-bottom:1px solid var(--line);}
+.nav-brand{font-weight:700;font-size:1.1rem;letter-spacing:.08em;}
+.nav-brand span{color:var(--accent);}
+nav ul{display:flex;gap:2rem;list-style:none;flex-wrap:wrap;justify-content:flex-end;}
+nav a{color:var(--muted);text-decoration:none;font-size:.85rem;letter-spacing:.04em;transition:.3s;}
+nav a:hover{color:#fff;}
+.hero{min-height:100vh;display:flex;flex-direction:column;justify-content:center;padding:8rem 6vw 4rem;background:linear-gradient(160deg,var(--bg) 0%,var(--bg2) 100%);position:relative;}
+.hero::before{content:'';position:absolute;top:0;right:0;width:50%;height:100%;background:radial-gradient(circle at 70% center,rgba(74,158,255,.08) 0%,transparent 60%);pointer-events:none;}
+.hero .tagline{color:var(--accent);font-size:.8rem;letter-spacing:.25em;text-transform:uppercase;}
+.hero h1{font-size:clamp(2.5rem,7vw,5rem);font-weight:800;letter-spacing:-.02em;line-height:1.05;margin-top:.5rem;}
+.hero .subtitle{color:#b0c4d8;font-size:clamp(1rem,2.5vw,1.3rem);margin-top:.8rem;max-width:30ch;}
+.hero .intro{color:#9ab0c8;max-width:min(58ch,90vw);margin-top:1.8rem;font-size:.95rem;line-height:1.7;}
+.hero .meta-row{display:flex;gap:2.5rem;margin-top:2.5rem;flex-wrap:wrap;}
+.hero .meta-item{font-size:.8rem;color:var(--muted);}
+.hero .meta-item strong{color:var(--accent2);display:block;font-size:.95rem;}
+section{padding:6rem 6vw;max-width:1100px;margin:0 auto;}
+.section-label{color:var(--accent);font-size:.75rem;letter-spacing:.25em;text-transform:uppercase;}
+section h2{font-size:clamp(1.8rem,4vw,2.8rem);font-weight:700;margin-top:.4rem;margin-bottom:.5rem;}
+.section-desc{color:var(--muted);max-width:60ch;margin-bottom:2.5rem;}
+.timeline{position:relative;padding-left:2rem;}
+.timeline::before{content:'';position:absolute;left:.35rem;top:.5rem;bottom:.5rem;width:2px;background:var(--line);}
+.tl-item{position:relative;padding-bottom:2.5rem;}
+.tl-item::before{content:'';position:absolute;left:-1.85rem;top:.35rem;width:12px;height:12px;border-radius:50%;background:var(--accent);border:2px solid var(--bg);}
+.tl-date{color:var(--accent);font-size:.8rem;font-weight:600;letter-spacing:.05em;}
+.tl-role{font-size:1.15rem;font-weight:600;margin-top:.2rem;}
+.tl-org{color:#9ab0c8;font-size:.9rem;margin-top:.1rem;}
+.tl-bullets{list-style:none;margin-top:.6rem;}
+.tl-bullets li{color:#9ab0c8;font-size:.88rem;padding-left:1.1rem;margin-bottom:.3rem;position:relative;}
+.tl-bullets li::before{content:'—';position:absolute;color:#4a6a85;left:0;}
+.domain-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.4rem;}
+.domain-card{background:var(--card);border:1px solid var(--line);border-radius:.8rem;padding:1.5rem;transition:.3s;}
+.domain-card:hover{border-color:rgba(74,158,255,.35);transform:translateY(-2px);}
+.domain-card h3{font-size:1rem;color:var(--accent2);margin-bottom:.4rem;}
+.domain-card p{color:#8fa3b8;font-size:.85rem;line-height:1.5;}
+.proj-item{padding:2rem 0;border-bottom:1px solid var(--line);}
+.proj-item:last-child{border-bottom:none;}
+.proj-item h3{font-size:1.2rem;font-weight:600;margin-bottom:.3rem;}
+.proj-tag{color:var(--accent);font-size:.78rem;font-weight:600;text-transform:uppercase;letter-spacing:.05em;}
+.proj-item p{color:#9ab0c8;font-size:.9rem;margin-top:.5rem;max-width:65ch;}
+.proj-links{margin-top:.7rem;display:flex;gap:1.2rem;flex-wrap:wrap;}
+.proj-links a{color:var(--accent);font-size:.82rem;text-decoration:none;border-bottom:1px solid transparent;transition:.3s;}
+.proj-links a:hover{border-color:var(--accent);}
+.comp-grid{display:flex;flex-wrap:wrap;gap:.6rem;}
+.comp-tag{background:var(--card);border:1px solid var(--line);padding:.4rem .9rem;border-radius:2rem;font-size:.82rem;color:#9ab0c8;}
+.comp-tag strong{color:var(--accent2);}
+.cert-list{list-style:none;}
+.cert-list li{padding:1rem 0;border-bottom:1px solid var(--line);color:#9ab0c8;font-size:.9rem;}
+.cert-list li strong{color:var(--accent2);}
+.contact-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1.5rem;}
+.contact-item{font-size:.88rem;color:#9ab0c8;}
+.contact-item strong{color:var(--accent2);display:block;margin-bottom:.2rem;}
+.contact-item a{color:var(--accent);text-decoration:none;}
+.reveal{opacity:0;transform:translateY(30px);transition:.7s cubic-bezier(.16,1,.3,1);}
+.reveal.visible{opacity:1;transform:none;}
+.d1{transition-delay:.12s;}.d2{transition-delay:.24s;}.d3{transition-delay:.36s;}
+footer{padding:3rem 6vw;text-align:center;color:#4a6a85;font-size:.82rem;border-top:1px solid var(--line);}
+footer .quote{color:var(--accent2);font-size:1.1rem;font-weight:300;letter-spacing:.05em;margin-bottom:.8rem;}
+@media(max-width:720px){nav{padding:.9rem 4vw;}nav ul{gap:.9rem;flex-wrap:wrap;justify-content:flex-end;}nav a{font-size:.74rem;}.nav-brand{font-size:1.05rem;}section{padding:4rem 5vw;}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto;}.reveal{transition:none;opacity:1;transform:none;}}
+</style>
+</head>
+<body>
+<nav id="nav">
+  <div class="nav-brand">DM<span>.</span></div>
+  <ul>
+    <li><a href="#about">About</a></li>
+    <li><a href="#career">Career</a></li>
+    <li><a href="#domains">Domains</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<header class="hero" id="top">
+  <p class="tagline reveal">AI Evaluation &amp; Training · Enterprise Systems · Lean</p>
+  <h1 class="reveal d1">Dušan<br>Milosavljević</h1>
+  <p class="subtitle reveal d2">Understanding how systems work — then improving them.</p>
+  <p class="intro reveal d3">Systems-oriented professional shaped by complexity, adaptability, and continuous improvement. 25 years studying and improving different kinds of systems — from SAP ERP and Lean manufacturing to autonomous AI agent frameworks.</p>
+  <div class="meta-row reveal d3">
+    <div class="meta-item"><strong>25</strong>Years of systems work</div>
+    <div class="meta-item"><strong>30+</strong>LLM providers integrated</div>
+    <div class="meta-item"><strong>1,559</strong>Passing tests in aura-code</div>
+  </div>
+</header>
+<section id="about">
+  <p class="section-label reveal">About</p>
+  <h2 class="reveal d1">Not a series of career changes — twenty-five years spent studying and improving different kinds of systems.</h2>
+  <p class="section-desc reveal d2">Educated as an information engineer at the University of Novi Sad during a period of deep social and economic disruption, I learned early to analyze systems, adapt quickly, and solve problems with limited resources. Through Lean (PDCA, 5S), I learned to look past symptoms to root causes. Language runs alongside it — C2 English and eleven years teaching professionals taught me to judge the quality of what is said. Today I apply that same judgement to AI: I design, direct and verify intelligent systems rather than write their production code.</p>
+</section>
+<section id="career">
+  <p class="section-label reveal">Chronology · 2024–2001</p>
+  <h2 class="reveal d1">Career timeline.</h2>
+  <div class="timeline">
+    <div class="tl-item reveal"><div class="tl-date">2024 — Present</div><div class="tl-role">Creator &amp; Systems Architect — aura-code</div><div class="tl-org">Lean Progress IQ</div><ul class="tl-bullets"><li>Designed a full agent loop — LLM streaming, tool execution, and human-in-the-loop confirmation</li><li>Specified integration of 30 LLM providers with runtime switching</li><li>Architected multi-agent orchestration with task routing and plan decomposition</li><li>Defined 25+ integrated tools and their permission/safety model</li><li>Held the system to 1,559 passing tests and a clean CodeQL security scan</li><li>Published to npm as aura-code (MIT licensed)</li></ul></div>
+    <div class="tl-item reveal d1"><div class="tl-date">2021 — 2026</div><div class="tl-role">Online English Teacher</div><div class="tl-org">Learnlight</div><ul class="tl-bullets"><li>Deliver tailored B2B English for corporate clients — presentations, negotiations, correspondence</li><li>Virtual Coach across Learnlight Academy, Virtual Group, One-to-one, and English SFP Group</li></ul></div>
+    <div class="tl-item reveal d2"><div class="tl-date">2017</div><div class="tl-role">Material &amp; Production Planning Coordinator</div><div class="tl-org">Yazaki Srbija d.o.o., Šabac</div><ul class="tl-bullets"><li>SAP superuser through the module rollout — configured master data, validated transactions, trained staff</li><li>Automated planning reports and data extracts, reconciling production schedules against SAP material availability</li></ul></div>
+    <div class="tl-item reveal"><div class="tl-date">2016</div><div class="tl-role">Micro Logistics Coordinator</div><div class="tl-org">DAD Draexlmaier d.o.o.</div><ul class="tl-bullets"><li>Implemented logistical processes in a Greenfield investment; coordinated the logistics planning team</li><li>Worked the SAP logistics implementation — process mapping, master-data migration, key-user training</li><li>Specified and rolled out E-Kanban with barcode scanning and SAP integration (Romania/Serbia)</li></ul></div>
+    <div class="tl-item reveal d1"><div class="tl-date">2015</div><div class="tl-role">Supervisor — Logistics</div><div class="tl-org">DAD Draexlmaier d.o.o., Zrenjanin</div><ul class="tl-bullets"><li>Supervised logistics operations, ensuring efficient material flow and on-time project delivery</li><li>Owned the site's SAP logistics transactions and reporting</li></ul></div>
+    <div class="tl-item reveal d2"><div class="tl-date">2015 — Present</div><div class="tl-role">Online English Teacher</div><class tl-org>Bibo Global Opportunity, Inc.</class tl-org></class tl-bullets></class tl-bullets></class tl-bullets></class tl-bullets></class tl-bullets></class tl-bullets></class tl-bullets></class tl-bullets></class tl-bullets></class tl-bullets></class tl-bullets></class tl-bullets>
+  </timeline>
+[replace: 3,036 chars omitted — payload too large to keep in context]
+<section id="domains">
+  <p class="section-label reveal">Domain Expertise</p>
+  <h2 class="reveal d1">Verifiable professional domains.</h2>
+  <p class="section-desc reveal d2">Available for AI training, evaluation and agentic-workflow authoring.</p>
+  <div class="domain-grid">
+    <div class="domain-card reveal"><h3>IT &amp; Systems Implementation</h3><p>SAP rollout, master-data migration and key-user training; GDS administration; reporting automation and site IT — agency workstations through automotive tier-1 plants.</p></div>
+    <div class="domain-card reveal d1"><h3>Enterprise Operations</h3><p>SAP ERP, production planning, logistics and material flow — automotive tier-1 environments (Yazaki, Draexlmaier), 3 years hands-on.</p></div>
+    <div class="domain-card reveal d2"><h3>Lean &amp; Process</h3><p>PDCA, 5S, root-cause analysis, cycle-time reduction across Serbia, Romania and Moldova sites.</p></div>
+    <div class="domain-card reveal"><h3>Travel &amp; GDS</h3><p>AMADEUS and Galileo booking, fare and ticketing workflows — 12 years as an IATA agent.</p></div>
+    <div class="domain-card reveal d1"><h3>Language &amp; Instruction</h3><p>C2 English and native Serbian; TEFL 120-hour certification; 11+ years of B2B instruction and assessment design.</p></div>
+    <div class="domain-card reveal d2"><h3>Agentic Systems</h3><p>Designed, shipped and verified a production multi-agent framework — qualified to author and grade agent task benchmarks.</p></div>
+  </div>
+</section>
+<section id="projects">
+  <p class="section-label reveal">Selected Projects</p>
+  <h2 class="reveal d1">Built, shipped and verified.</h2>
+  <div class="proj-list">
+    <div class="proj-item reveal">
+      <p class="proj-tag">AI Agent Framework</p>
+      <h3>aura-code — Autonomous AI Agent Framework</h3>
+      <p>Model-agnostic (Claude · GPT · Gemini · Ollama), 30 providers, 25+ tools, multi-agent orchestration. 1,559 tests · MIT licensed · published on npm (v0.14.0).</p>
+      <div class="proj-links"><a href="https://npmjs.com/package/aura-code">npm</a><a href="https://github.com/DusanCar-sudo/aura-code">GitHub</a></div>
+    </div>
+    <div class="proj-item reveal d1">
+      <p class="proj-tag">Evaluation</p>
+      <h3>Aura Benchmark — Agent Evaluation Harness</h3>
+      <p>320-question benchmark suite measuring agent task performance — authored the question set, scoring criteria and execution harness. Paired with a public 50-day longitudinal trial publishing daily automated results.</p>
+      <div class="proj-links"><a href="https://dusancar-sudo.github.io/aura-50-day-trial">50-day trial</a></div>
+    </div>
+    <div class="proj-item reveal d2">
+      <p class="proj-tag">Legal-tech / MLOps</p>
+      <h3>Serbian Legal LLM Fine-Tuning</h3>
+      <p>Scraped and cleaned ~1,600 public Serbian acts (~11M words) into structured JSONL; supervised fine-tuning on Google Vertex AI (EU). Further fine-tuning pipelines for Granite and Gemma small models.</p>
+    </div>
+    <div class="proj-item reveal">
+      <p class="proj-tag">Mobile / Kotlin</p>
+      <h3>aura-droid — Native Android Agent Client</h3>
+      <p>Kotlin Android client running the full agent loop on mobile, connected to the aura-code engine over a WebSocket transport.</p>
+      <div class="proj-links"><a href="https://aura-droid.vercel.app">Live</a><a href="https://github.com/DusanCar-sudo/aura-droid">GitHub</a></div>
+    </div>
+    <div class="proj-item reveal d1">
+      <p class="proj-tag">Cross-Platform</p>
+      <h3>Aura Ecosystem — Multiple Transports</h3>
+      <p>One engine, multiple transports: aura-mathetes (Tauri / Rust desktop), aura-pulse (system telemetry, AI clipboard vault, hardware benchmarks), and lakaura-bot (deployed Telegram agent service with voice replies).</p>
+      <div class="proj-links"><a href="https://github.com/DusanCar-sudo/aura-pulse">GitHub</a></div>
+    </div>
+    <div class="proj-item reveal d2">
+      <p class="proj-tag">Also Public</p>
+      <h3>enables · agentmesh · sisi</h3>
+      <p>enables — runs Claude Code against almost any AI provider · agentmesh — visual agent workflow builder · sisi — semantic image search CLI.</p>
+      <div class="proj-links"><a href="https://enables.vercel.app">enables</a><a href="https://agentmesh-zeta.vercel.app">agentmesh</a></div>
+    </div>
+  </div>
+</section>
+<section id="comps">
+  <p class="section-label reveal">Competencies</p>
+  <h2 class="reveal d1">Core competencies.</h2>
+  <p class="section-desc reveal d2">Reads, specifies and directs technical systems — architecture, review and verification rather than production engineering.</p>
+  <div class="comp-grid reveal d2">
+    <span class="comp-tag"><strong>TypeScript</strong></span>
+    <span class="comp-tag"><strong>Node.js</strong></span>
+    <span class="comp-tag"><strong>Python</strong></span>
+    <span class="comp-tag"><strong>SAP ERP</strong></span>
+    <span class="comp-tag"><strong>Lean / PDCA / 5S</strong></span>
+    <span class="comp-tag"><strong>Multi-agent orchestration</strong></span>
+    <span class="comp-tag"><strong>MCP protocol</strong></span>
+    <span class="comp-tag"><strong>RAG / Graph RAG</strong></span>
+    <span class="comp-tag"><strong>RLHF &amp; preference ranking</strong></span>
+    <span class="comp-tag"><strong>Git / CI-CD</strong></span>
+    <span class="comp-tag"><strong>AMADEUS / Galileo GDS</strong></span>
+  </div>
+</section>
+<section id="certs">
+  <p class="section-label reveal">Certifications</p>
+  <h2 class="reveal d1">Certifications &amp; credentials.</h2>
+  <ul class="cert-list reveal d2">
+    <li><strong>Generative AI with Vertex AI: MLOps &amp; Deployment</strong> — Google Cloud (2026)</li>
+    <li><strong>Elements of AI</strong> — University of Helsinki (2026)</li>
+    <li><strong>TEFL — 120-hour Advanced Certification</strong></li>
+    <li><strong>SAP ERP System Superuser</strong></li>
+    <li><strong>Fitness Trainer &amp; Nutritionist</strong></li>
+    <li><strong>Lean Manufacturing · PDCA · 5S</strong></li>
+  </ul>
+</section>
+<section id="contact">
+  <p class="section-label reveal">Contact</p>
+  <h2 class="reveal d1">Let's talk.</h2>
+  <p class="section-desc reveal d2">Available for AI evaluation, training, and agentic-workflow projects.</p>
+  <div class="contact-grid reveal d2">
+    <div class="contact-item"><strong>Based in</strong>Da Nang, Vietnam · Zrenjanin, Serbia</div>
+    <div class="contact-item"><strong>Phone</strong>+84 37 612 5323<br>+381 63 7692687</div>
+    <div class="contact-item"><strong>Email</strong><a href="mailto:leanproiq@gmail.com">leanproiq@gmail.com</a><br><a href="mailto:milodule3@gmail.com">milodule3@gmail.com</a></div>
+    <div class="contact-item"><strong>Links</strong><a href="https://github.com/DusanCar-sudo">GitHub</a> · <a href="https://lean-progress-iq.vercel.app">Lean Progress IQ</a></div>
+  </div>
+</section>
+<footer>
+  <p class="quote">I don't try. I verify.</p>
+  Dušan Milosavljević · 2026
+</footer>
+
+<script>
+  const nav=document.getElementById('nav');
+  let ticking=false;
+  window.addEventListener('scroll',()=>{
+    if(!ticking){requestAnimationFrame(()=>{
+      nav.classList.toggle('scrolled',window.scrollY>40);
+      ticking=false;
+    });ticking=true;}
+  },{passive:true});
+  const io=new IntersectionObserver(e=>{
+    e.forEach(x=>{if(x.isIntersecting){x.target.classList.add('visible');io.unobserve(x.target);}});
+  },{threshold:0.15});
+  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
